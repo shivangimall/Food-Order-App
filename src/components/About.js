@@ -1,42 +1,36 @@
-import User from "./User";
-import UserClass from "./UserClass";
-import React from "react";
+import thal from "../Photos/thal.jpg";
+import { Link } from "react-router-dom";
 
-class About extends React.Component{
-
-    constructor(props){
-        super(props);
-
-        // console.log("Parent Constructor");
-    }
-    componentDidMount() {
-        // console.log("Parent CompnentDidMount");
-    }
-    render(){
-        // console.log("Parent render");
-        return (
+const About = () =>{
+    return (
+        <>
+          <div className="flex items-center justify-center border h-[630px]">
+            <div className="w-[800px]">
             <div>
-                <h1>About</h1>
-                <h2>This is Namaste React Course</h2>
-
-                <UserClass/>
-               
-            </div>  
-        )
-
-    }
-
-}
-// const About = () =>{
-//     return (
-//         <div>
-//             <h1>About</h1>
-//             <h2>This is Namaste React Course</h2>
-//             <User name = {"Akshya Saini (function)"}/>
-
-//             <UserClass name = {"Akshya Saini (Class)"} location = {"Delhi"}/>
-//         </div>  
-//     )
-// };
+              <img className="rounded-full h-2/4 w-3/4" src={thal} />
+            </div>
+              
+            </div>
+            <div>
+            <h1 className="font-bold text-4xl text-gray-600 border mr-5 w-[600px] p-5 bg-blue-100 rounded-md">
+              "Food is a rich cultural journey. Savor each bite, respect every ingredient, and minimize waste."
+              </h1>
+    
+              <div className="flex ml-60  items-center flex-col w-72 justify-evenly">
+                <div className="flex mt-10">
+                  <h2 className="font-semibold">Created By :-</h2>
+                  <Link to="https://www.linkedin.com/in/shivangi-mall-2bb4551ab/" className=" ml-2 font-bold text-blue-900">
+                    Shivangi Mall
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+              
+          </div>
+          
+        </>
+      );
+};
 
 export default About;
