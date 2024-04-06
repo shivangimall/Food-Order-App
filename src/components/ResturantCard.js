@@ -4,6 +4,7 @@ import { useContext } from "react";
 
 const ResturantCard = (props) =>{
     const {resData} = props;
+   
     const {cloudinaryImageId,name,cuisines,avgRating,costForTwo,sla,areaName} = resData?.info;
     
     return (
